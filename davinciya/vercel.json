@@ -1,1 +1,6 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
