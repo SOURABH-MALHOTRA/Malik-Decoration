@@ -1,33 +1,31 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import AboutSection from './components/AboutSection'
-import MarqueeSection from './components/MarqueeSection'
-import ServicesSection from './components/ServicesSection'
-import WhyChoose from './components/WhyChoose'
-import Gallery from './components/Gallery'
-import HowItWorks from './components/HowItWorks'
-import Footer from './components/Footer'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+// import Offerings from "./pages/Offerings";
+// import Gallery from "./pages/Gallery";
+import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
         <Navbar />
-        <main>
-          <Hero />
-          <AboutSection />
-          <MarqueeSection />
-          <ServicesSection />
-          <WhyChoose />
-          <Gallery />
-          <HowItWorks />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/offerings" element={<Offerings />} /> */}
+            {/* <Route path="/gallery" element={<Gallery />} /> */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
         <Footer />
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

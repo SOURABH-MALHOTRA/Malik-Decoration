@@ -1,83 +1,80 @@
 import React from 'react'
-import { Facebook, Instagram, Youtube, Linkedin } from 'lucide-react'
+import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin, MessageCircle} from 'lucide-react'
 import logo from '../assets/logo.jpeg'
 
 const footerLinks = {
-  'Interior Design':       ['Malik Decoration', 'Trending Designs', 'Master Bedroom', 'Living Room', 'Balcony & Terrace'],
-  'Our Offerings':         ['Our Offerings', 'Available Cities', 'Partner With Us', 'Contact Us', 'Blog'],
-  'Company':               ['Home', 'About Us', 'Contact Us', 'Refund Policy', 'Terms & Condition', 'Privacy Policy'],
+  'Interior Design': ['Malik Decoration', 'Trending Designs', 'Master Bedroom', 'Living Room', 'Balcony & Terrace'],
+  'Our Offerings': ['Our Offerings', 'Available Cities', 'Partner With Us', 'Contact Us', 'Blog'],
+  'Company': ['Home', 'About Us', 'Contact Us', 'Refund Policy', 'Terms & Condition', 'Privacy Policy'],
 }
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <img src={logo} alt="Malik Decoration Pvt. Ltd." className="h-32 w-auto object-contain mb-4"/>
-            <div className="space-y-2 text-sm text-gray-500">
-              <div className="flex gap-2 items-start">
-                <span className="mt-0.5">📍</span>
+    <footer className="bg-white border-t border-[#4a3728]/20">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          
+          {/* 1. Brand Section */}
+          <div className="lg:col-span-2">
+            <img src={logo} alt="Malik Decoration" className="h-20 w-auto mb-6 object-contain"/>
+            <div className="space-y-4 text-sm text-gray-600">
+              <div className="flex gap-3 items-start hover:text-[#4a3728] transition-colors cursor-pointer">
+                <MapPin className="shrink-0 text-[#4a3728]" size={20}/>
                 <p>A-816, F/F, Shri Ram Colony, Gali No-16, Rajeev Nagar, New Delhi, 110094</p>
               </div>
-              <div className="flex gap-2 items-center">
-                <span>📞</span>
-                <a href="tel:+918791379047" className="hover:text-[#4a3728]">+91 8791379047</a>
+              <div className="flex gap-3 items-center hover:text-[#4a3728] transition-colors">
+                <Phone className="shrink-0 text-[#4a3728]" size={20}/>
+                <a href="tel:+918791379047">+91 87913 79047</a>
               </div>
-              <div className="flex gap-2 items-center">
-                <span>✉️</span>
-                <a href="mailto:info@malikdecoration.com" className="hover:text-[#4a3728]">info@malikdecoration.com</a>
+              <div className="flex gap-3 items-center hover:text-[#4a3728] transition-colors">
+                <Mail className="shrink-0 text-[#4a3728]" size={20}/>
+                <a href="mailto:info@malikdecoration.com">info@malikdecoration.com</a>
               </div>
             </div>
           </div>
 
-          {/* Link columns */}
+          {/* 2. Link Columns */}
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>
-              <h4 className="font-semibold text-gray-900 text-sm mb-4">{heading}</h4>
-              <ul className="space-y-2">
+              <h4 className="font-bold text-[#4a3728] text-sm uppercase tracking-wider mb-6">{heading}</h4>
+              <ul className="space-y-3">
                 {links.map(link => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-gray-500 hover:text-[#4a3728] transition-colors">{link}</a>
+                    <a href="#" className="text-sm text-gray-600 hover:text-[#4a3728] hover:translate-x-1 transition-all inline-block">{link}</a>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-semibold text-gray-900 text-sm mb-4">Newsletters</h4>
-            <div className="flex gap-2 mb-5">
-              <input type="email" placeholder="Your email"
-                className="flex-1 border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-[#4a3728] min-w-0"/>
-              <button className="bg-[#2a1e14] hover:bg-[#4a3728] text-white text-sm font-medium px-4 py-2 rounded transition-colors">
-                Submit
-              </button>
-            </div>
-            <div className="flex gap-3">
-              {[
-                { Icon: Facebook,  label: 'Facebook' },
-                { Icon: Instagram, label: 'Instagram' },
-                { Icon: Youtube,   label: 'YouTube' },
-                { Icon: Linkedin,  label: 'LinkedIn' },
-              ].map(({ Icon, label }) => (
-                <a key={label} href="#" aria-label={label} className="text-gray-500 hover:text-[#4a3728] transition-colors">
-                  <Icon size={18}/>
-                </a>
-              ))}
-            </div>
+        {/* 3. Newsletter & Socials */}
+        <div className="border-[#4a3728]/10 flex flex-col lg:flex-row justify-between items-center gap-8">
+         
+
+          <div className="flex gap-4">
+            {[
+              { Icon: Facebook, label: 'Facebook' },
+              { Icon: Instagram, label: 'Instagram' },
+           
+             
+            ].map(({ Icon, label }) => (
+              <a key={label} href="#" aria-label={label} 
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-[#4a3728] hover:bg-[#4a3728] hover:text-white transition-all duration-300">
+                <Icon size={20}/>
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-gray-400">Copyright © 2025 Malik Decoration Pvt. Ltd. All Rights Reserved.</p>
-          <div className="flex gap-2 items-center">
-            {['AMEX', 'DINERS', 'MAESTRO', 'MASTERCARD'].map(card => (
-              <span key={card} className="text-xs text-gray-400 border border-gray-200 rounded px-2 py-0.5 bg-white">{card}</span>
+      {/* 4. Bottom Bar */}
+      <div className="bg-gray-50 py-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+          <p>© 2025 Malik Decoration Pvt. Ltd. All Rights Reserved.</p>
+          <div className="flex gap-4">
+            {['Privacy Policy', 'Terms of Service', 'Sitemap'].map(item => (
+              <a key={item} href="#" className="hover:text-[#4a3728]">{item}</a>
             ))}
           </div>
         </div>
