@@ -390,7 +390,7 @@ export default function Villa() {
                     letterSpacing: "1px",
                   }}
                 >
-                  +91 9911150420
+                 +91 87913 79047
                 </span>
               </div>
             </div>

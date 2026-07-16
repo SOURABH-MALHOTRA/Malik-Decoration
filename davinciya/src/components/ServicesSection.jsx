@@ -33,10 +33,10 @@ export default function ServicesSection() {
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-12">
           <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 leading-snug mb-4">
-            Malik Decoration – One Destination.
+            Malik Decoration – One Destination
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> </span>
-            Endless Interior Inspiration.
+            Endless Interior Inspiration
           </h2>
 
           <p className="text-gray-500 text-xs sm:text-base max-w-2xl mx-auto leading-relaxed">

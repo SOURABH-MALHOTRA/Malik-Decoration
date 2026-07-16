@@ -188,7 +188,7 @@ export default function Footer() {
             <div className="flex gap-4">
 
               <a
-                href="YOUR_FACEBOOK_LINK"
+                href="https://www.facebook.com/people/Malik-Decoration-Pvt-Ltd/61577593342926/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full border border-[#4a3728]/20 flex items-center justify-center hover:bg-[#4a3728] hover:text-white transition"
@@ -197,7 +197,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="YOUR_INSTAGRAM_LINK"
+                href="https://www.instagram.com/malik__decoration_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full border border-[#4a3728]/20 flex items-center justify-center hover:bg-[#4a3728] hover:text-white transition"

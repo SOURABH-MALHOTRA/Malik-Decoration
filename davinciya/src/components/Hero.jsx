@@ -130,13 +130,13 @@ export default function Hero() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-2">
             <a
-              href="#"
+              href="/contact"
               className="w-full sm:w-auto text-center bg-[#c9a96e] hover:bg-[#b8935a] text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all whitespace-nowrap"
             >
               Book Consultation
             </a>
             <a
-              href="#"
+              href="/gallery"
               className="w-full sm:w-auto text-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all whitespace-nowrap"
             >
               View More
