@@ -1,0 +1,15 @@
+export const categories = [
+  "Living Room",
+  "Bedroom",
+  "Modular Kitchens",
+  "Dining Areas",
+  "Entry & Foyer",
+  "Balconies",
+  "Bathrooms",
+  "Apartment",
+  "Corporate",
+  "Healthcare",
+  "Restaurant & Cafe",
+  "Retail",
+  "Villa",
+];

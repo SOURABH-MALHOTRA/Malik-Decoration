@@ -6,10 +6,11 @@ import AboutSection from "../components/AboutSection";
 import WhyChoose from "../components/WhyChoose";
 import GallerySection from "../components/Gallery";
 import HowItWorks from "../components/HowItWorks";
-
+import CategoriesSlider from "./CategorySlider";
 export default function Home() {
   return (
     <>
+      <CategoriesSlider/>
       <Hero />
       <ServicesSection />
       <MarqueeSection />

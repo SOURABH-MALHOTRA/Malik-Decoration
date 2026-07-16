@@ -74,51 +74,71 @@ const rightStats = [
 
 export default function WhyChoose() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center font-serif text-3xl font-semibold text-gray-900 mb-14">
-          Why Choose Malik Decoration?
-        </h2>
+    <section className=" sm:py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-3 gap-10 items-center">
-          {/* Left stats */}
-          <div className="space-y-8">
-            {leftStats.map(s => (
-              <div key={s.title} className="flex gap-4 items-start">
-                <div className="flex-shrink-0">{s.icon}</div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+    <h2 className="text-center font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-10 sm:mb-14 leading-snug">
+      Why Choose Malik Decoration?
+    </h2>
 
-          {/* Center circle image */}
-          <div className="flex justify-center">
-            <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#c9a96e] shadow-lg">
-              <img
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
-                alt="Beautiful interior"
-                className="w-full h-full object-cover"
-              />
+    <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 items-center">
+
+      {/* Left stats */}
+      <div className="space-y-6 sm:space-y-8">
+        {leftStats.map((s) => (
+          <div key={s.title} className="flex gap-3 sm:gap-4 items-start">
+            <div className="flex-shrink-0">
+              {s.icon}
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">
+                {s.title}
+              </h3>
+
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                {s.desc}
+              </p>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Right stats */}
-          <div className="space-y-8">
-            {rightStats.map(s => (
-              <div key={s.title} className="flex gap-4 items-start">
-                <div className="flex-shrink-0">{s.icon}</div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 text-sm mb-1">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Center circle image */}
+      <div className="flex justify-center">
+        <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-[#c9a96e] shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
+            alt="Beautiful interior"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
-    </section>
+
+      {/* Right stats */}
+      <div className="space-y-6 sm:space-y-8">
+        {rightStats.map((s) => (
+          <div key={s.title} className="flex gap-3 sm:gap-4 items-start">
+            <div className="flex-shrink-0">
+              {s.icon}
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">
+                {s.title}
+              </h3>
+
+              <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+                {s.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>
   )
 }
